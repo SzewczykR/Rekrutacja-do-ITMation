@@ -49,7 +49,7 @@ namespace Flashlight_Simulator
 
         private void btnFlashlightOn_Click(object sender, EventArgs e)
         {
-            if (Flashlight.GetBulbState() && Flashlight.GetBatteriesInCount() >= 2 && Flashlight.IsEnoughPower())
+            if (!Flashlight.GetIsOn() && Flashlight.GetBulbState() && Flashlight.GetBatteriesInCount() >= 2 && Flashlight.IsEnoughPower())
             {
                 for(int i=0; i < Flashlight.GetBatteriesInCount(); i++)
                 {
@@ -77,11 +77,13 @@ namespace Flashlight_Simulator
                 }
                 tbFlashlightState.Text = "WŁĄCZONA";
                 tbFlashlightState.BackColor = Color.Green;
-                Flashlight.TurnOn();
+                Flashlight.Turn(true);
             }
             else
             {
-                if (!Flashlight.GetBulbState() && Flashlight.GetBatteriesInCount() < 2)
+                if (Flashlight.GetIsOn())
+                    MessageBox.Show("Latarka jest już włączona!", "Błąd!");
+                else if (!Flashlight.GetBulbState() && Flashlight.GetBatteriesInCount() < 2)
                     MessageBox.Show("W latarce nie ma żarówki ani dostatecznej ilości baterii.", "Błąd!");
                 else if (!Flashlight.GetBulbState() && !Flashlight.IsEnoughPower())
                     MessageBox.Show("W latarce nie ma żarówki ani dostatecznej ilości mocy w bateriach.", "Błąd!");
@@ -96,7 +98,7 @@ namespace Flashlight_Simulator
 
         private void btnFlashlightOff_Click(object sender, EventArgs e)
         {
-            Flashlight.TurnOff();
+            Flashlight.Turn(false);
             tbFlashlightState.Text = "WYŁĄCZONA";
             tbFlashlightState.BackColor = Color.Red;
         }
@@ -173,13 +175,13 @@ namespace Flashlight_Simulator
                 isOn = false;
                 isBulbIn = false;
             }
-            public static void TurnOn()
+            public static void Turn(bool iss)
             {
-                isOn = true;
+                isOn = iss;
             }
-            public static void TurnOff()
+            public static bool GetIsOn()
             {
-                isOn = false;
+                return isOn;
             }
             public static void PlugInBulb()
             {
