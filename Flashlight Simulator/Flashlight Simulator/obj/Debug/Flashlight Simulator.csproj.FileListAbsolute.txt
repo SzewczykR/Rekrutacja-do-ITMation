@@ -1,0 +1,10 @@
+C:\Users\HP\source\repos\Flashlight Simulator\Flashlight Simulator\bin\Debug\Flashlight Simulator.exe.config
+C:\Users\HP\source\repos\Flashlight Simulator\Flashlight Simulator\bin\Debug\Flashlight Simulator.exe
+C:\Users\HP\source\repos\Flashlight Simulator\Flashlight Simulator\bin\Debug\Flashlight Simulator.pdb
+C:\Users\HP\source\repos\Flashlight Simulator\Flashlight Simulator\obj\Debug\Flashlight Simulator.csprojResolveAssemblyReference.cache
+C:\Users\HP\source\repos\Flashlight Simulator\Flashlight Simulator\obj\Debug\Flashlight_Simulator.Form1.resources
+C:\Users\HP\source\repos\Flashlight Simulator\Flashlight Simulator\obj\Debug\Flashlight_Simulator.Properties.Resources.resources
+C:\Users\HP\source\repos\Flashlight Simulator\Flashlight Simulator\obj\Debug\Flashlight Simulator.csproj.GenerateResource.Cache
+C:\Users\HP\source\repos\Flashlight Simulator\Flashlight Simulator\obj\Debug\Flashlight Simulator.csproj.CoreCompileInputs.cache
+C:\Users\HP\source\repos\Flashlight Simulator\Flashlight Simulator\obj\Debug\Flashlight Simulator.exe
+C:\Users\HP\source\repos\Flashlight Simulator\Flashlight Simulator\obj\Debug\Flashlight Simulator.pdb
